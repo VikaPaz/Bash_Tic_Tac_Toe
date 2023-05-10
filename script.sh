@@ -24,14 +24,14 @@ function check_win {
      [[ ${board[2]} == $1 && ${board[4]} == $1 && ${board[6]} == $1 ]]
   then
     display_board
-    echo "Игрок $1 плбедил!"
+    echo "РРіСЂРѕРє $1 РІС‹РёРіСЂР°Р»!"
     exit
   fi
 }
 
 while true; do
   display_board
-  read -p "Игрок $player, выбери клетку (1-9): " pos
+  read -p "РРіСЂРѕРє $player, РІС‹Р±РµСЂРё РєР»РµС‚РєСѓ (1-9): " pos
   if [[ $pos -ge 1  &&  $pos -le 9 ]]
   then
       if [[ ${board[$pos-1]} == " " ]] 
@@ -45,11 +45,11 @@ while true; do
           player="X"
         fi
       else
-        echo "Эта клетка уже занята, попробуй снова"
+        echo "Р­С‚Р° РєР»РµС‚РєР° Р·Р°РЅСЏС‚Р°, РїРѕРїСЂРѕР±СѓР№ РµС‰С‘"
         sleep 1
       fi
   else
-      echo "Такой клетки не существует"
+      echo "РўР°РєРѕР№ РєР»РµС‚РєРё РЅРµС‚, РїРѕРїСЂРѕР±СѓР№ РµС‰С‘"
       sleep 1
   fi
 done
